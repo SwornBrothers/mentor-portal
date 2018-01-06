@@ -29,8 +29,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 
-  <link rel="stylesheet" type="text/css" href="../dist/css/dataTables.bootstrap.min.css">
-
   <!-- Google Font -->
   <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
@@ -135,7 +133,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <img src="../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                 <p>
-                  Ehsanul Haque - Mentor
+                  Ehsanul Haque - Web Developer
                   <small>Member since Nov. 2017</small>
                 </p>
               </li>
@@ -180,21 +178,42 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">Menu</li>
         <!-- Optionally, you can add icons to the links -->
-        <li class="active"><a href="#" id="home"><i class="fa fa-link"></i> <span>Home</span></a></li>
-        <li><a href="#" id="myProfile"><i class="fa fa-link"></i> <span>My Profile</span></a></li>
+        <li class="active"><a href="#" id="overview"><i class="fa fa-link"></i> <span>OverView</span></a></li>
+        <li><a href="#" id="activity"><i class="fa fa-link"></i> <span>Activity</span></a></li>
         <li class="treeview">
-          <a href="#"><i class="fa fa-link"></i> <span>Projects</span>
+          <a href="#"><i class="fa fa-link"></i> <span>Issues</span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#" id="createProject">Create Project</a></li>
-            <li><a href="#" id="viewProjects">My Projects</a></li>
+            <li><a href="#" id="createIssue">Create Issue</a></li>
+            <li><a href="#" id="viewIssues">View Issue</a></li>
           </ul>
         </li>
-        <li><a href="#" id="about"><i class="fa fa-link"></i> <span>About Us</span></a></li>
-        <li><a href="#" id="contact"><i class="fa fa-link"></i> <span>Contact Us</span></a></li>
+
+        <li class="treeview">
+          <a href="#"><i class="fa fa-link"></i> <span>Notice Board</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="#" class="notice">View Notice</a></li>
+            <li><a href="#" class="postNotice">Post Notice</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#"><i class="fa fa-link"></i> <span>Team</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="#" id="teamSettings">Team Members</a></li>
+            <li><a href="#" id="projectSettings">Suggest Menber</a></li>
+          </ul>
+        </li>
 
       </ul>
       <!-- /.sidebar-menu -->
@@ -207,10 +226,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-      <h1>
-        Create Projects
-
-      </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
         <li class="active">Here</li>
@@ -218,77 +233,78 @@ scratch. This page gets rid of all links and provides the needed markup only.
     </section>
 
     <!-- Main content -->
-    <section class="content">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="form-group">
-            <label>Project Name</label>
-            <input type="text" class="form-control" placeholder="Enter ...">
+    <section class="container">
+      <form class="" action="#" method="post">
+        <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="box-header with-border">
+            <h3 class="text-center">Create Issue</h3>
           </div>
-          <div class="form-group">
-            <label>Project Area</label>
-            <select class="form-control">
-              <option>--Select--</option>
-              <option>Desktop</option>
-              <option>Mobile</option>
-              <option>Web</option>
-            </select>
-          </div>
+          <!-- /.box-header -->
+          <div class="box-body">
+              <!-- text input -->
+              <div class="form-group">
+                <label>Issue Title</label>
+                <input type="text" class="form-control" placeholder="Enter ...">
+              </div>
+              <div class="form-group">
+                <label>Issue Type</label>
+                <select class="form-control">
+                  <option>--Select--</option>
+                  <option>Task</option>
+                  <option>Bug</option>
+                  <option>Improvement</option>
+                </select>
+              </div>
 
-          <div class="form-group">
-            <label>Project Type</label>
-            <select class="form-control">
-              <option>--Select--</option>
-              <option>Free</option>
-              <option>Paid</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Repsitory Name</label>
-            <input type="text" class="form-control" placeholder="Enter ..." >
-          </div>
+              <div class="form-group">
+                <label>Parent issue(conditional*)</label>
+                <select class="form-control">
+                  <option>--Select--</option>
+                  <option>issue -1</option>
+                  <option>issue -2</option>
+                  <option>issue -3</option>
+                  <option>issue -4</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Due date</label>
+                <input type="date" class="form-control" placeholder="Enter ...">
+              </div>
 
-          <!-- Add member -->
-          <div class="form-group">
-            <label>Add Member</label>
-            <input class="form-control" placeholder="user name or Email ..."></input>
-            <select class="form-control">
-              <option>--Select accessablity--</option>
-              <option>Read only</option>
-              <option>can Develop</option>
-            </select>
-          </div>
-          <div>
-            <button  class="btn btn-primary">Add</button>
-          </div>
+              <div class="form-group">
+                <label>Issue priority</label>
+                <select class="form-control">
+                  <option>--Select--</option>
+                  <option>Low</option>
+                  <option>Medium</option>
+                  <option>High</option>
+                </select>
+              </div>
 
-          <div class="form-group">
-            <label>Select SDLC</label>
-            <select class="form-control">
-              <option>--Select--</option>
-              <option>Scrum</option>
-              <option>DSDM</option>
-              <option>XP</option>
-            </select>
-          </div>
+              <div class="form-group">
+                <label>Issue Description</label>
+                <textarea class="form-control" rows="5" placeholder="Enter ..." ></textarea>
+              </div>
 
-          <div class="form-group">
-            <label>Project Description</label>
-            <textarea class="form-control" rows="5" placeholder="Enter ..." ></textarea>
+              <div class="form-group">
+                <label>Assign to</label>
+                <input type="text" class="form-control" placeholder="user name or email ...">
+              </div>
+
+              <div>
+                <button  type="submit" class="btn btn-primary">Create</button>
+                <button type="button" class="btn btn-danger" name="button">Cancel</button>
+              </div>
           </div>
-          <div>
-            <button  type="submit" class="btn btn-primary">Create</button>
-            <button type="button" class="btn btn-danger" name="button">Cancel</button>
-          </div>
+          <!-- /.box-body -->
         </div>
       </div>
 
+      </form>
     </section>
 
     <!-- /.content -->
-
-
-
   </div>
   <!-- /.content-wrapper -->
 
@@ -325,18 +341,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <script src="js/page.js"></script>
 
-
-<script type="text/javascript" src="../dist/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="../dist/js/dataTables.bootstrap.min.js"></script>
-
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
      Both of these plugins are recommended to enhance the
      user experience. -->
-
-<script type="text/javascript">
-  $(document).ready(function() {
-    $('.table').DataTable();
-  });
-</script>
 </body>
 </html>
