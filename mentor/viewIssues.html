@@ -135,7 +135,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <img src="../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                 <p>
-                  Ehsanul Haque - Mentor
+                  Ehsanul Haque - Web Developer
                   <small>Member since Nov. 2017</small>
                 </p>
               </li>
@@ -181,20 +181,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <li class="header">Menu</li>
         <!-- Optionally, you can add icons to the links -->
         <li class="active"><a href="#" id="home"><i class="fa fa-link"></i> <span>Home</span></a></li>
-        <li><a href="#" id="myProfile"><i class="fa fa-link"></i> <span>My Profile</span></a></li>
-        <li class="treeview">
-          <a href="#"><i class="fa fa-link"></i> <span>Projects</span>
-            <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="#" id="createProject">Create Project</a></li>
-            <li><a href="#" id="viewProjects">My Projects</a></li>
-          </ul>
-        </li>
-        <li><a href="#" id="about"><i class="fa fa-link"></i> <span>About Us</span></a></li>
-        <li><a href="#" id="contact"><i class="fa fa-link"></i> <span>Contact Us</span></a></li>
+        <li><a href="#" id="activity"><i class="fa fa-link"></i> <span>My Profile</span></a></li>
+        <li><a href="#" id="activity"><i class="fa fa-link"></i> <span>My Projects</span></a></li>
+        <li><a href="#" id="activity"><i class="fa fa-link"></i> <span>About Us</span></a></li>
+        <li><a href="#" id="activity"><i class="fa fa-link"></i> <span>Contact Us</span></a></li>
 
       </ul>
       <!-- /.sidebar-menu -->
@@ -208,7 +198,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Create Projects
+        My Projects
 
       </h1>
       <ol class="breadcrumb">
@@ -219,76 +209,84 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     <!-- Main content -->
     <section class="content">
+
       <div class="row">
-        <div class="col-md-12">
-          <div class="form-group">
-            <label>Project Name</label>
-            <input type="text" class="form-control" placeholder="Enter ...">
-          </div>
-          <div class="form-group">
-            <label>Project Area</label>
-            <select class="form-control">
-              <option>--Select--</option>
-              <option>Desktop</option>
-              <option>Mobile</option>
-              <option>Web</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label>Project Type</label>
-            <select class="form-control">
-              <option>--Select--</option>
-              <option>Free</option>
-              <option>Paid</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Repsitory Name</label>
-            <input type="text" class="form-control" placeholder="Enter ..." >
-          </div>
-
-          <!-- Add member -->
-          <div class="form-group">
-            <label>Add Member</label>
-            <input class="form-control" placeholder="user name or Email ..."></input>
-            <select class="form-control">
-              <option>--Select accessablity--</option>
-              <option>Read only</option>
-              <option>can Develop</option>
-            </select>
-          </div>
-          <div>
-            <button  class="btn btn-primary">Add</button>
-          </div>
-
-          <div class="form-group">
-            <label>Select SDLC</label>
-            <select class="form-control">
-              <option>--Select--</option>
-              <option>Scrum</option>
-              <option>DSDM</option>
-              <option>XP</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label>Project Description</label>
-            <textarea class="form-control" rows="5" placeholder="Enter ..." ></textarea>
-          </div>
-          <div>
-            <button  type="submit" class="btn btn-primary">Create</button>
-            <button type="button" class="btn btn-danger" name="button">Cancel</button>
-          </div>
+        <div class="col-md-4 offset-md-4 col-sm-8 offset-sm-2 col-xs-12">
+          <br><br>
         </div>
       </div>
 
+      <div class="row">
+
+        <div class="col-md-12">
+          <table class="table table-striped">
+            <thead class="thead-inverse">
+              <tr>
+                <th>#</th>
+                <th>Title</th>
+                <th>Category</th>
+                <th>Date Created</th>
+                <th>Status</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row">1</td>
+                <td>Project One</td>
+                <td>Web Development</td>
+                <td>July 11, 2017</td>
+                <td>Running</td>
+                <td><a href="details.html" class="btn btn-secondary"><i class="fa fa-angle-double-right"></i> Details</a></td>
+              </tr>
+              <tr>
+                <td scope="row">2</td>
+                <td>Project Two</td>
+                <td>Web Development</td>
+                <td>July 12, 2017</td>
+                <td>Running</td>
+                <td><a href="details.html" class="btn btn-secondary"><i class="fa fa-angle-double-right"></i> Details</a></td>
+              </tr>
+              <tr>
+                <td scope="row">3</td>
+                <td>Project Three</td>
+                <td>Tech Gadgets</td>
+                <td>July 12, 2017</td>
+                <td>Running</td>
+                <td><a href="details.html" class="btn btn-secondary"><i class="fa fa-angle-double-right"></i> Details</a></td>
+              </tr>
+              <tr>
+                <td scope="row">4</td>
+                <td>Project Four</td>
+                <td>Health & Wellness</td>
+                <td>July 13, 2017</td>
+                <td>Completed</td>
+                <td><a href="details.html" class="btn btn-secondary"><i class="fa fa-angle-double-right"></i> Details</a></td>
+              </tr>
+              <tr>
+                <td scope="row">5</td>
+                <td>Project Five</td>
+                <td>Web Development</td>
+                <td>July 14, 2017</td>
+                <td>Canceled</td>
+                <td><a href="details.html" class="btn btn-secondary"><i class="fa fa-angle-double-right"></i> Details</a></td>
+              </tr>
+              <tr>
+                <td scope="row">6</td>
+                <td>Project Six</td>
+                <td>Business</td>
+                <td>July 14, 2017</td>
+                <td>Completed</td>
+                <td><a href="details.html" class="btn btn-secondary"><i class="fa fa-angle-double-right"></i> Details</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
     </section>
 
     <!-- /.content -->
-
-
-
   </div>
   <!-- /.content-wrapper -->
 
