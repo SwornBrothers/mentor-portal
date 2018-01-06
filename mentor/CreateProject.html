@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>M P | Create Post</title>
+  <title>M P | Create project</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -28,78 +28,81 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 <body class="hold-transition login-page">
-  <form class="" action="index.html" method="post">
-    <div class="container">
-      <div class="box-header with-border">
-        <h3 class="text-center">Create Project</h3>
+  <section class="container">
+    <form class="" action="#" method="post">
+      <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="box-header with-border">
+          <h3 class="text-center">Create Project</h3>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+            <!-- text input -->
+            <div class="form-group">
+              <label>Project Name</label>
+              <input type="text" class="form-control" placeholder="Enter ...">
+            </div>
+            <div class="form-group">
+              <label>Project Area</label>
+              <select class="form-control">
+                <option>--Select--</option>
+                <option>Desktop</option>
+                <option>Mobile</option>
+                <option>Web</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Project Type</label>
+              <select class="form-control">
+                <option>--Select--</option>
+                <option>Free</option>
+                <option>Paid</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Repsitory Name</label>
+              <input type="text" class="form-control" placeholder="Enter ..." >
+            </div>
+
+            <!-- Add member -->
+            <div class="form-group">
+              <label>Add Member</label>
+              <input class="form-control" placeholder="user name or Email ..."></input>
+              <select class="form-control">
+                <option>--Select accessablity--</option>
+                <option>Read only</option>
+                <option>can Develop</option>
+              </select>
+            </div>
+            <div>
+              <button  class="btn btn-primary">Add</button>
+            </div>
+
+            <div class="form-group">
+              <label>Select SDLC</label>
+              <select class="form-control">
+                <option>--Select--</option>
+                <option>Scrum</option>
+                <option>DSDM</option>
+                <option>XP</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Project Description</label>
+              <textarea class="form-control" rows="5" placeholder="Enter ..." ></textarea>
+            </div>
+            <div>
+              <button  type="submit" class="btn btn-primary">Create</button>
+              <button type="button" class="btn btn-danger" name="button">Cancel</button>
+            </div>
+        </div>
+        <!-- /.box-body -->
       </div>
-      <!-- /.box-header -->
-      <div class="box-body">
-        <form role="form">
-          <!-- text input -->
-          <div class="form-group">
-            <label>Project Name</label>
-            <input type="text" class="form-control" placeholder="Enter ...">
-          </div>
-          <div class="form-group">
-            <label>Project Area</label>
-            <select class="form-control">
-              <option>--Select--</option>
-              <option>Desktop</option>
-              <option>Mobile</option>
-              <option>Web</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label>Project Type</label>
-            <select class="form-control">
-              <option>--Select--</option>
-              <option>Free</option>
-              <option>Paid</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Repsitory Name</label>
-            <input type="text" class="form-control" placeholder="Enter ..." >
-          </div>
-
-          <!-- Add member -->
-          <div class="form-group">
-            <label>Add Member</label>
-            <input class="form-control" placeholder="user name or Email ..."></input>
-            <select class="form-control">
-              <option>--Select accessablity--</option>
-              <option>Read only</option>
-              <option>can Develop</option>
-            </select>
-          </div>
-          <div>
-            <button  class="btn btn-primary">Add</button>
-          </div>
-
-          <div class="form-group">
-            <label>Select SDLC</label>
-            <select class="form-control">
-              <option>--Select--</option>
-              <option>Scrum</option>
-              <option>DSDM</option>
-              <option>XP</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label>Project Description</label>
-            <textarea class="form-control" rows="5" placeholder="Enter ..." ></textarea>
-          </div>
-          <div>
-            <button  type="submit" class="btn btn-primary">Create</button>
-            <button type="button" class="btn btn-danger" name="button">Cancel</button>
-          </div>
-      </div>
-      <!-- /.box-body -->
     </div>
 
-  </form>
+    </form>
+  </section>
 </body>
 </html>
