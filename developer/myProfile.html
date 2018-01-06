@@ -29,7 +29,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 
-  <link rel="stylesheet" type="text/css" href="../dist/css/dataTables.bootstrap.min.css">
 
   <!-- Google Font -->
   <link rel="stylesheet"
@@ -151,9 +150,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </ul>
           </li>
           <!-- Control Sidebar Toggle Button -->
-          <li>
-            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
-          </li>
+
         </ul>
       </div>
     </nav>
@@ -181,10 +178,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <li class="header">Menu</li>
         <!-- Optionally, you can add icons to the links -->
         <li class="active"><a href="#" id="home"><i class="fa fa-link"></i> <span>Home</span></a></li>
-        <li><a href="#" id="activity"><i class="fa fa-link"></i> <span>My Profile</span></a></li>
-        <li><a href="#" id="activity"><i class="fa fa-link"></i> <span>My Projects</span></a></li>
-        <li><a href="#" id="activity"><i class="fa fa-link"></i> <span>About Us</span></a></li>
-        <li><a href="#" id="activity"><i class="fa fa-link"></i> <span>Contact Us</span></a></li>
+        <li><a href="#" id="myProfile"><i class="fa fa-link"></i> <span>My Profile</span></a></li>
+        <li><a href="#" id="myProjects"><i class="fa fa-link"></i> <span>My Projects</span></a></li>
+        <li><a href="#" id="about"><i class="fa fa-link"></i> <span>About Us</span></a></li>
+        <li><a href="#" id="contact"><i class="fa fa-link"></i> <span>Contact Us</span></a></li>
 
       </ul>
       <!-- /.sidebar-menu -->
@@ -214,24 +211,29 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <div class="col-md-3">
 
           <!-- Profile Image -->
-          <div class="box box-widget widget-user-2">
-            <!-- Add the bg color to the header using any of the bg-* classes -->
-            <div class="widget-user-header bg-yellow">
-              <div class="widget-user-image">
-                <img class="img-circle" src="../dist/img/user7-128x128.jpg" alt="User Avatar">
-              </div>
-              <!-- /.widget-user-image -->
-              <h3 class="widget-user-username">Nadia Carmichael</h3>
-              <h5 class="widget-user-desc">Lead Developer</h5>
-            </div>
-            <div class="box-footer no-padding">
-              <ul class="nav nav-stacked">
-                <li><a href="#">Projects <span class="pull-right badge bg-blue">31</span></a></li>
-                <li><a href="#">Tasks <span class="pull-right badge bg-aqua">5</span></a></li>
-                <li><a href="#">Completed Projects <span class="pull-right badge bg-green">12</span></a></li>
-                <li><a href="#">Followers <span class="pull-right badge bg-red">842</span></a></li>
+          <div class="box box-primary">
+            <div class="box-body box-profile">
+              <img class="profile-user-img img-responsive img-circle" src="../../dist/img/user4-128x128.jpg" alt="User profile picture">
+
+              <h3 class="profile-username text-center">Nina Mcintire</h3>
+
+              <p class="text-muted text-center">Software Engineer</p>
+
+              <ul class="list-group list-group-unbordered">
+                <li class="list-group-item">
+                  <b>Followers</b> <a class="pull-right">1,322</a>
+                </li>
+                <li class="list-group-item">
+                  <b>Following</b> <a class="pull-right">543</a>
+                </li>
+                <li class="list-group-item">
+                  <b>Friends</b> <a class="pull-right">13,287</a>
+                </li>
               </ul>
+
+              <a href="#" class="btn btn-primary btn-block"><b>Follow</b></a>
             </div>
+            <!-- /.box-body -->
           </div>
           <!-- /.box -->
 
@@ -289,7 +291,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <!-- Post -->
                 <div class="post">
                   <div class="user-block">
-                    <img class="img-circle img-bordered-sm" src="../dist/img/user1-128x128.jpg" alt="user image">
+                    <img class="img-circle img-bordered-sm" src="../../dist/img/user1-128x128.jpg" alt="user image">
                         <span class="username">
                           <a href="#">Jonathan Burke Jr.</a>
                           <a href="#" class="pull-right btn-box-tool"><i class="fa fa-times"></i></a>
@@ -320,7 +322,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <!-- Post -->
                 <div class="post clearfix">
                   <div class="user-block">
-                    <img class="img-circle img-bordered-sm" src="../dist/img/user7-128x128.jpg" alt="User Image">
+                    <img class="img-circle img-bordered-sm" src="../../dist/img/user7-128x128.jpg" alt="User Image">
                         <span class="username">
                           <a href="#">Sarah Ross</a>
                           <a href="#" class="pull-right btn-box-tool"><i class="fa fa-times"></i></a>
@@ -352,7 +354,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <!-- Post -->
                 <div class="post">
                   <div class="user-block">
-                    <img class="img-circle img-bordered-sm" src="../dist/img/user6-128x128.jpg" alt="User Image">
+                    <img class="img-circle img-bordered-sm" src="../../dist/img/user6-128x128.jpg" alt="User Image">
                         <span class="username">
                           <a href="#">Adam Jones</a>
                           <a href="#" class="pull-right btn-box-tool"><i class="fa fa-times"></i></a>
@@ -362,21 +364,21 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <!-- /.user-block -->
                   <div class="row margin-bottom">
                     <div class="col-sm-6">
-                      <img class="img-responsive" src="../dist/img/photo1.png" alt="Photo">
+                      <img class="img-responsive" src="../../dist/img/photo1.png" alt="Photo">
                     </div>
                     <!-- /.col -->
                     <div class="col-sm-6">
                       <div class="row">
                         <div class="col-sm-6">
-                          <img class="img-responsive" src="../dist/img/photo2.png" alt="Photo">
+                          <img class="img-responsive" src="../../dist/img/photo2.png" alt="Photo">
                           <br>
-                          <img class="img-responsive" src="../dist/img/photo3.jpg" alt="Photo">
+                          <img class="img-responsive" src="../../dist/img/photo3.jpg" alt="Photo">
                         </div>
                         <!-- /.col -->
                         <div class="col-sm-6">
-                          <img class="img-responsive" src="../dist/img/photo4.jpg" alt="Photo">
+                          <img class="img-responsive" src="../../dist/img/photo4.jpg" alt="Photo">
                           <br>
-                          <img class="img-responsive" src="../dist/img/photo1.png" alt="Photo">
+                          <img class="img-responsive" src="../../dist/img/photo1.png" alt="Photo">
                         </div>
                         <!-- /.col -->
                       </div>
@@ -560,7 +562,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <!-- /.row -->
 
     </section>
-
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
@@ -579,7 +580,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- /.control-sidebar -->
   <!-- Add the sidebar's background. This div must be placed
   immediately after the control sidebar -->
-  <div class="control-sidebar-bg"></div>
+
 </div>
 <!-- ./wrapper -->
 
@@ -596,20 +597,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- AdminLTE for demo purposes -->
 <script src="../dist/js/demo.js"></script>
 
-<script src="js/page.js"></script>
-
-
-<script type="text/javascript" src="../dist/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="../dist/js/dataTables.bootstrap.min.js"></script>
 
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
      Both of these plugins are recommended to enhance the
      user experience. -->
 
-<script type="text/javascript">
-  $(document).ready(function() {
-    $('.table').DataTable();
-  });
-</script>
 </body>
 </html>
