@@ -180,11 +180,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">Menu</li>
         <!-- Optionally, you can add icons to the links -->
-        <li class="active" id="home"><a href="#"><i class="fa fa-link"></i> <span>Home</span></a></li>
-        <li  id="myProfile"><a href="#"><i class="fa fa-link"></i> <span>My Profile</span></a></li>
-        <li id="myProjects"><a href="#"><i class="fa fa-link"></i> <span>My Projects</span></a></li>
-        <li id="about"><a href="#"><i class="fa fa-link"></i> <span>About Us</span></a></li>
-        <li id="contact"><a href="#"><i class="fa fa-link"></i> <span>Contact Us</span></a></li>
+        <li class="active"><a href="#" id="home"><i class="fa fa-link"></i> <span>Home</span></a></li>
+        <li><a href="#" id="activity"><i class="fa fa-link"></i> <span>My Profile</span></a></li>
+        <li><a href="#" id=""><i class="fa fa-link"></i> <span>My Projects</span></a></li>
+        <li><a href="#" id=""><i class="fa fa-link"></i> <span>About Us</span></a></li>
+        <li><a href="#" id=""><i class="fa fa-link"></i> <span>Contact Us</span></a></li>
 
       </ul>
       <!-- /.sidebar-menu -->
@@ -195,7 +195,123 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        My Issues
 
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
+        <li class="active">Here</li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+      <div class="row">
+        <div class="col-md-4 offset-md-4 col-sm-8 offset-sm-2 col-xs-12">
+          <br><br>
+        </div>
+      </div>
+
+      <div class="row">
+
+        <div class="col-md-12">
+          <table class="table table-striped">
+            <thead class="thead-inverse">
+              <tr>
+                <th>#</th>
+                <th>Title</th>
+                <th>Type</th>
+                <th>Priority</th>
+                <th>Submitted By</th>
+                <th>Submitted On</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row">1</td>
+                <td>Project One</td>
+                <td>Bug</td>
+                <td>Low</td>
+                <td>Dipto Zaman</td>
+                <td>July 11, 2017</td>
+                <td align="center">
+                  <a href="details.html" class="btn btn-primary btn-xs"><i class="fa fa-angle-double-right"></i> Review</a>
+                  <a href="details.html" class="btn btn-info btn-xs"><i class="fa fa-angle-double-right"></i> Details</a>
+                </td>
+              </tr>
+              <tr>
+                <td scope="row">2</td>
+                <td>Project Two</td>
+                <td>Task</td>
+                <td>Medium</td>
+                <td>Dipto Zaman</td>
+                <td>July 12, 2017</td>
+                <td align="center">
+                  <a href="details.html" class="btn btn-primary btn-xs"><i class="fa fa-angle-double-right"></i> Review</a>
+                  <a href="details.html" class="btn btn-info btn-xs"><i class="fa fa-angle-double-right"></i> Details</a>
+                </td>
+              </tr>
+              <tr>
+                <td scope="row">3</td>
+                <td>Issue Three</td>
+                <td>Redo</td>
+                <td>High</td>
+                <td>Dipto Zaman</td>
+                <td>July 12, 2017</td>
+                <td align="center">
+                  <a href="details.html" class="btn btn-primary btn-xs"><i class="fa fa-angle-double-right"></i> Review</a>
+                  <a href="details.html" class="btn btn-info btn-xs"><i class="fa fa-angle-double-right"></i> Details</a>
+                </td>
+              </tr>
+              <tr>
+                <td scope="row">4</td>
+                <td>Issue Four</td>
+                <td>Bug</td>
+                <td>High</td>
+                <td>Ehsan Haque</td>
+                <td>July 13, 2017</td>
+                <td align="center">
+                  <a href="details.html" class="btn btn-primary btn-xs"><i class="fa fa-angle-double-right"></i> Review</a>
+                  <a href="details.html" class="btn btn-info btn-xs"><i class="fa fa-angle-double-right"></i> Details</a>
+                </td>
+              </tr>
+              <tr>
+                <td scope="row">5</td>
+                <td>Issue Five</td>
+                <td>Task</td>
+                <td>Medium</td>
+                <td>Dipto Zaman</td>
+                <td>July 14, 2017</td>
+                <td align="center">
+                  <a href="details.html" class="btn btn-primary btn-xs"><i class="fa fa-angle-double-right"></i> Review</a>
+                  <a href="details.html" class="btn btn-info btn-xs"><i class="fa fa-angle-double-right"></i> Details</a>
+                </td>
+              </tr>
+              <tr>
+                <td scope="row">6</td>
+                <td>Issue Six</td>
+                <td>Redo</td>
+                <td>High</td>
+                <td>Dipto Zaman</td>
+                <td>July 14, 2017</td>
+                <td align="center">
+                  <a href="details.html" class="btn btn-primary btn-xs"><i class="fa fa-angle-double-right"></i> Review</a>
+                  <a href="details.html" class="btn btn-info btn-xs"><i class="fa fa-angle-double-right"></i> Details</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
 
@@ -243,52 +359,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script type="text/javascript">
   $(document).ready(function() {
     $('.table').DataTable();
-    $('.content-wrapper').load("home.html");
-
-    $('#home').on('click', () => {
-      $('#myProjects').removeClass("active");
-      $('#home').addClass("active");
-      $('#myProfile').removeClass("active");
-      $('#contact').removeClass("active");
-      $('#about').removeClass("active");
-      $('.content-wrapper').load("home.html");
-    });
-
-    $('#myProjects').on('click', () => {
-      $('#myProjects').addClass("active");
-      $('#home').removeClass("active");
-      $('#myProfile').removeClass("active");
-      $('#contact').removeClass("active");
-      $('#about').removeClass("active");
-      $('.content-wrapper').load("myProjects.html");
-    });
-
-    $('#myProfile').on('click', () => {
-      $('#myProjects').removeClass("active");
-      $('#home').removeClass("active");
-      $('#myProfile').addClass("active");
-      $('#contact').removeClass("active");
-      $('#about').removeClass("active");
-      $('.content-wrapper').load("myProfile.html");
-    });
-
-    $('#contact').on('click', () => {
-      $('#myProjects').removeClass("active");
-      $('#home').removeClass("active");
-      $('#myProfile').removeClass("active");
-      $('#contact').addClass("active");
-      $('#about').removeClass("active");
-      $('.content-wrapper').load("../shared/contact.html");
-    });
-
-    $('#about').on('click', () => {
-      $('#myProjects').removeClass("active");
-      $('#home').removeClass("active");
-      $('#myProfile').removeClass("active");
-      $('#contact').removeClass("active");
-      $('#about').addClass("active");
-      $('.content-wrapper').load("../shared/about.html");
-    });
   });
 </script>
 </body>
