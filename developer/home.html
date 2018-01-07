@@ -27,7 +27,49 @@
           </div>
           <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
             <div class="panel-body">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              <form>
+    						<div class="form-group">
+    							<label>Title </label>
+    							<input class="form-control" type="text">
+    						</div>
+
+    						<div class="form-group">
+    							<label>Language </label>
+    							<select class ="form-control">
+    								<option value="notselected">---Select---</option>
+    								<option value="c#">C#</option>
+    								<option value="c++">C++</option>
+    								<option value="HTML">HTML CSS</option>
+    								<option value="py">Python</option>
+    								<option value="asp">ASP.NET</option>
+    								<option value="java">Java</option>
+    								<option value="php">php</option>
+    							</select>
+    						</div>
+
+    						<div class="form-group">
+    							<label>Select project Area</label>
+    							<select class="form-control">
+    								<option value="notselected">Select area</option>
+    								<option value="web">Web based</option>
+    								<option value="desk">Desktop</option>
+    								<option value="ios">ios</option>
+    								<option value="android">Android</option>
+    							</select>
+    						</div>
+
+    						<div class="form-group">
+    							<label> Description about project(Not more than 160 words)</label>
+    							<textarea class="form-control" rows="3"></textarea>
+    						</div>
+
+
+
+    						<button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#modal-default">Post</button>
+
+
+
+    					</form>
             </div>
           </div>
         </div>
@@ -79,7 +121,7 @@
                 </p>
                 <ul class="list-inline">
                   <li>
-                     <button type="button" name="button" class="btn btn-block btn-primary">
+                     <button type="button" name="button" class="btn btn-block btn-primary interestButton">
                         <i class="fa fa-star-o margin-r-8"></i> I'm Interested
                      </button>
                      <li class="pull-right">
@@ -187,7 +229,7 @@
                 </p>
                 <ul class="list-inline">
                   <li>
-                     <button type="button" name="button" class="btn btn-block btn-primary">
+                     <button type="button" name="button" class="btn btn-block btn-primary interestButton">
                         <i class="fa fa-star-o margin-r-8"></i> I'm Interested
                      </button>
                      <li class="pull-right">
@@ -295,7 +337,7 @@
                 </p>
                 <ul class="list-inline">
                   <li>
-                     <button type="button" name="button" class="btn btn-block btn-primary">
+                     <button type="button" name="button" class="btn btn-block btn-primary interestButton">
                         <i class="fa fa-star-o margin-r-8"></i> I'm Interested
                      </button>
                      <li class="pull-right">
@@ -358,7 +400,26 @@
         </div>
 
     </div>
+
+
+    <div class="modal fade" id="modal-default">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <p>Your Post Is Live Now!</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
 
 </section>
+
+
 
 <!-- /.content -->
