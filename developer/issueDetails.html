@@ -180,11 +180,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">Menu</li>
         <!-- Optionally, you can add icons to the links -->
-        <li class="active" id="home"><a href="#"><i class="fa fa-link"></i> <span>Home</span></a></li>
-        <li  id="myProfile"><a href="#"><i class="fa fa-link"></i> <span>My Profile</span></a></li>
-        <li id="myProjects"><a href="#"><i class="fa fa-link"></i> <span>My Projects</span></a></li>
-        <li id="about"><a href="#"><i class="fa fa-link"></i> <span>About Us</span></a></li>
-        <li id="contact"><a href="#"><i class="fa fa-link"></i> <span>Contact Us</span></a></li>
+        <li class="active"><a href="#" id="home"><i class="fa fa-link"></i> <span>Home</span></a></li>
+        <li><a href="#" id="activity"><i class="fa fa-link"></i> <span>My Profile</span></a></li>
+        <li><a href="#" id=""><i class="fa fa-link"></i> <span>My Projects</span></a></li>
+        <li><a href="#" id=""><i class="fa fa-link"></i> <span>About Us</span></a></li>
+        <li><a href="#" id=""><i class="fa fa-link"></i> <span>Contact Us</span></a></li>
 
       </ul>
       <!-- /.sidebar-menu -->
@@ -195,6 +195,116 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
+
+    <section class="content">
+        //mycodee
+        <!-- title--details,type,realted issue,status,priorty, assginee,deudate,asigndatetime,done,created time,created by-->
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                    <!-- main info -->
+                    <div class="box box-primary box-solid">
+                      <div class="box-header with-border">
+                        <h3 class="box-title">Issue Details</h3>
+
+                        <div class="box-tools pull-right">
+                          <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                          </button>
+                        </div>
+                        <!-- /.box-tools -->
+                      </div>
+                      <!-- /.box-header -->
+                      <div class="box-body">
+                        <div class="col-sm-6 col-sm-offset-3">
+
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td><strong><a href="#">Title&nbsp;:&nbsp;&nbsp;</a><strong></td>
+                                        <td><span class="username">Log in issue</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><h5><a href="#">Type&nbsp;:&nbsp;&nbsp;</a></h5></td>
+                                        <td><span class="label label-primary">Task</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><h5><a href="#">priorty &nbsp;:&nbsp;&nbsp;</a></h5></td>
+                                        <td>
+                                            <span class="btn-group"><button type="button" class="btn btn-xs btn-danger" name="button">High</button>
+                                                <button type="button" class="btn btn-xs dropdown-toggle" data-toggle="dropdown" aria-expanded="false" name="button">
+                                                    <span class="caret"></span>
+                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li> <button class="btn btn-warning btn-block btn-xs">Medium</button>  </li>
+                                                    <li> <button class="btn btn-success btn-block btn-xs">Low</button>  </li>
+                                                </ul>
+                                            </span>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><h5><a href="#">Status&nbsp;:&nbsp;&nbsp;</a></h5></td>
+                                        <td>
+                                            <span class="btn-group"><button type="button" class="btn btn-xs btn-info" name="button">In progress</button>
+                                                <button type="button" class="btn btn-xs dropdown-toggle" data-toggle="dropdown" aria-expanded="false" name="button">
+                                                  <span class="caret"></span>
+                                                  <span class="sr-only">Toggle Dropdown</span>
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                  <li> <button class="btn btn-warning btn-block btn-xs">Pending</button>  </li>
+                                                  <li> <button class="btn btn-primary btn-block btn-xs">Under Review</button>  </li>
+                                                  <li> <button class="btn btn-success btn-block btn-xs">Approved</button>  </li>
+                                                  <li> <button class="btn btn-danger btn-block btn-xs">Denied</button>  </li>
+                                                </ul>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><h5><a href="#">created by&nbsp;:&nbsp;&nbsp;</a></h5></td>
+                                        <td><span class="username">Dipto Zaman</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><h5><a href="#">Assginee&nbsp;:&nbsp;&nbsp;</a></h5></td>
+                                        <td><span class="username">Baky forhad</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                      </div>
+                      <!-- /.box-body -->
+                    </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+
+                <div class="box box-primary box-solid collapsed-box">
+                  <div class="box-header with-border">
+                    <h3 class="box-title">More inftormations.....</h3>
+
+                    <div class="box-tools pull-right">
+                      <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
+                      </button>
+                    </div>
+                    <!-- /.box-tools -->
+                  </div>
+                  <!-- /.box-header -->
+                  <div class="box-body">
+                    The body of the box
+                  </div>
+                  <!-- /.box-body -->
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+    </section>
 
   </div>
   <!-- /.content-wrapper -->
@@ -230,6 +340,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- AdminLTE for demo purposes -->
 <script src="../dist/js/demo.js"></script>
 
+<script src="js/page.js"></script>
 
 
 <script type="text/javascript" src="../dist/js/jquery.dataTables.min.js"></script>
@@ -242,54 +353,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script type="text/javascript">
   $(document).ready(function() {
     $('.table').DataTable();
-
-    $('.content-wrapper').load("home.html");
-    
-
-    $('#home').on('click', () => {
-      $('#myProjects').removeClass("active");
-      $('#home').addClass("active");
-      $('#myProfile').removeClass("active");
-      $('#contact').removeClass("active");
-      $('#about').removeClass("active");
-      $('.content-wrapper').load("home.html");
-    });
-
-    $('#myProjects').on('click', () => {
-      $('#myProjects').addClass("active");
-      $('#home').removeClass("active");
-      $('#myProfile').removeClass("active");
-      $('#contact').removeClass("active");
-      $('#about').removeClass("active");
-      $('.content-wrapper').load("myProjects.html");
-    });
-
-    $('#myProfile').on('click', () => {
-      $('#myProjects').removeClass("active");
-      $('#home').removeClass("active");
-      $('#myProfile').addClass("active");
-      $('#contact').removeClass("active");
-      $('#about').removeClass("active");
-      $('.content-wrapper').load("myProfile.html");
-    });
-
-    $('#contact').on('click', () => {
-      $('#myProjects').removeClass("active");
-      $('#home').removeClass("active");
-      $('#myProfile').removeClass("active");
-      $('#contact').addClass("active");
-      $('#about').removeClass("active");
-      $('.content-wrapper').load("../shared/contact.html");
-    });
-
-    $('#about').on('click', () => {
-      $('#myProjects').removeClass("active");
-      $('#home').removeClass("active");
-      $('#myProfile').removeClass("active");
-      $('#contact').removeClass("active");
-      $('#about').addClass("active");
-      $('.content-wrapper').load("../shared/about.html");
-    });
   });
 </script>
 </body>
