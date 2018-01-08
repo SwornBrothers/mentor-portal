@@ -785,7 +785,7 @@
                     <td>Mentor</td>
                     <td align="center">
                        <a href="#" class="btn btn-info btn-xs"><i class="fa fa-tick"></i> Make Mentor</a>
-                       <a href="mentorProfile.html" class="btn btn-info btn-xs"><i class="fa fa-angle-double-right"></i> viewProfile</a>
+                       <button class="btn btn-info btn-xs" id="mentor" data-dismiss="modal"><i class="fa fa-angle-double-right"></i> viewProfile</button>
                     </td>
                   </tr>
                   <tr>
@@ -793,7 +793,7 @@
                     <td>Baky Forhad</td>
                     <td>Developer</td>
                     <td align="center">
-                       <a href="developerProfile.html" class="btn btn-info btn-xs"><i class="fa fa-angle-double-right"></i> viewProfile</a>
+                       <a href="developerProfile.html" class="btn btn-info btn-xs developer"><i class="fa fa-angle-double-right"></i> viewProfile</a>
                     </td>
                   </tr>
                   <tr>
@@ -801,7 +801,7 @@
                     <td>Ehsanul Haque</td>
                     <td>Developer</td>
                     <td align="center">
-                       <a href="developerProfile.html" class="btn btn-info btn-xs"><i class="fa fa-angle-double-right"></i> viewProfile</a>
+                       <a href="developerProfile.html" class="btn btn-info btn-xs developer"><i class="fa fa-angle-double-right"></i> viewProfile</a>
                     </td>
                   </tr>
                   <tr>
@@ -809,7 +809,7 @@
                     <td>Dipto Miah</td>
                     <td>Developer</td>
                     <td align="center">
-                       <a href="developerProfile.html" class="btn btn-info btn-xs"><i class="fa fa-angle-double-right"></i> viewProfile</a>
+                       <a href="developerProfile.html" class="btn btn-info btn-xs developer"><i class="fa fa-angle-double-right"></i> viewProfile</a>
                     </td>
                   </tr>
 
@@ -820,8 +820,7 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
       <!-- /.modal-content -->
@@ -1118,3 +1117,13 @@
   <!-- /.modal -->
 
 </section>
+<script type="text/javascript">
+  $('#mentor').on('click', () => {
+    $('#myProjects').removeClass("active");
+    $('#home').removeClass("active");
+    $('#myProfile').removeClass("active");
+    $('#contact').removeClass("active");
+    $('#about').removeClass("active");
+    $('.content-wrapper').load("mentorProfile.html");
+  });
+</script>

@@ -243,7 +243,25 @@ scratch. This page gets rid of all links and provides the needed markup only.
   $(document).ready(function() {
     $('.table').DataTable();
 
+    // var name = GetParameterValues('location');
+    //
+    // if (name == "mentorProfile") {
+    //   $('.content-wrapper').load("mentorProfile.html");
+    // } else if (name == "developerProfile") {
+    //   $('.content-wrapper').load("mentorProfile.html");
+    // }
+
     $('.content-wrapper').load("home.html");
+
+    // function GetParameterValues(param) {
+    //         var url = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    //         for (var i = 0; i < url.length; i++) {
+    //             var urlparam = url[i].split('=');
+    //             if (urlparam[0] == param) {
+    //                 return urlparam[1];
+    //             }
+    //         }
+    // }
 
 
     $('#home').on('click', () => {
@@ -290,6 +308,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
       $('#about').addClass("active");
       $('.content-wrapper').load("issueDetails.html");
     });
+
+    $('#baal').on('click', () => {
+      $('#myProjects').removeClass("active");
+      $('#home').removeClass("active");
+      $('#myProfile').removeClass("active");
+      $('#contact').removeClass("active");
+      $('#about').removeClass("active");
+      $('.content-wrapper').load("mentorProfile.html");
+    });
+
   });
 </script>
 </body>
