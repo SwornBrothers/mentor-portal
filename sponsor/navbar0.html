@@ -239,94 +239,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
      user experience. -->
 
 <script type="text/javascript">
- $(document).ready(function() {
-   $('.table').DataTable();
-
-   // var name = GetParameterValues('location');
-   //
-   // if (name == "mentorProfile") {
-   //   $('.content-wrapper').load("mentorProfile.html");
-   // } else if (name == "developerProfile") {
-   //   $('.content-wrapper').load("mentorProfile.html");
-   // }
-
-   $('.content-wrapper').load("home.html");
-
-   // function GetParameterValues(param) {
-   //         var url = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
-   //         for (var i = 0; i < url.length; i++) {
-   //             var urlparam = url[i].split('=');
-   //             if (urlparam[0] == param) {
-   //                 return urlparam[1];
-   //             }
-   //         }
-   // }
-
-   $('#logo').on('click', () => {
-     $('#myProjects').removeClass("active");
-     $('#home').addClass("active");
-     $('#myProfile').removeClass("active");
-     $('#contact').removeClass("active");
-     $('#about').removeClass("active");
-     $('.content-wrapper').load("home.html");
-   });
-
-
-   $('#home').on('click', () => {
-     $('#myProjects').removeClass("active");
-     $('#home').addClass("active");
-     $('#myProfile').removeClass("active");
-     $('#contact').removeClass("active");
-     $('#about').removeClass("active");
-     $('.content-wrapper').load("home.html");
-   });
-
-   $('#myProjects').on('click', () => {
-     $('#myProjects').addClass("active");
-     $('#home').removeClass("active");
-     $('#myProfile').removeClass("active");
-     $('#contact').removeClass("active");
-     $('#about').removeClass("active");
-     $('.content-wrapper').load("myProjects.html");
-   });
-
-   $('#myProfile').on('click', () => {
-     $('#myProjects').removeClass("active");
-     $('#home').removeClass("active");
-     $('#myProfile').addClass("active");
-     $('#contact').removeClass("active");
-     $('#about').removeClass("active");
-     $('.content-wrapper').load("myProfile.html");
-   });
-
-   $('#profile').on('click', () => {
-     $('#myProjects').removeClass("active");
-     $('#home').removeClass("active");
-     $('#myProfile').addClass("active");
-     $('#contact').removeClass("active");
-     $('#about').removeClass("active");
-     $('.content-wrapper').load("myProfile.html");
-   });
-
-   $('#contact').on('click', () => {
-     $('#myProjects').removeClass("active");
-     $('#home').removeClass("active");
-     $('#myProfile').removeClass("active");
-     $('#contact').addClass("active");
-     $('#about').removeClass("active");
-     $('.content-wrapper').load("../shared/contact.html");
-   });
-
-   $('#about').on('click', () => {
-     $('#myProjects').removeClass("active");
-     $('#home').removeClass("active");
-     $('#myProfile').removeClass("active");
-     $('#contact').removeClass("active");
-     $('#about').addClass("active");
-     $('.content-wrapper').load("../shared/about.html");
-   });
-
- });
+  $(document).ready(function() {
+    $('.table').DataTable();
+  });
 </script>
 </body>
 </html>
