@@ -32,6 +32,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Google Font -->
   <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+  <link rel="stylesheet" type="text/css" href="../dist/css/dataTables.bootstrap.min.css">
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">
@@ -41,7 +43,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <header class="main-header">
 
     <!-- Logo -->
-    <a href="home.html" class="logo">
+    <a href="./navbar.html" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>M</b>P</span>
       <!-- logo for regular state and mobile devices -->
@@ -140,10 +142,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
-                  <a href="viewProfile.html" class="btn btn-default btn-flat">Profile</a>
+                  <button id="profile" class="btn btn-default btn-flat">Profile</button>
                 </div>
                 <div class="pull-right">
-                  <a href="index.html" class="btn btn-default btn-flat">Sign out</a>
+                  <a href="../index.html" class="btn btn-default btn-flat">Sign out</a>
                 </div>
               </li>
             </ul>
@@ -178,42 +180,23 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">Menu</li>
         <!-- Optionally, you can add icons to the links -->
-        <li class="active"><a href="#" id="overview"><i class="fa fa-link"></i> <span>OverView</span></a></li>
-        <li><a href="#" id="activity"><i class="fa fa-link"></i> <span>Activity</span></a></li>
-        <li class="treeview">
+        <li class="active" id="overview"><a href="#"><i class="fa fa-link"></i> <span>OverView</span></a></li>
+        <li id="activity"><a href="#"><i class="fa fa-link"></i> <span>Activity</span></a></li>
+        <li class="treeview" id="issues">
           <a href="#"><i class="fa fa-link"></i> <span>Issues</span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#" id="createIssue">Create Issue</a></li>
-            <li><a href="#" id="viewIssues">View Issue</a></li>
+            <li id="createIssue"><a href="#">Create Issue</a></li>
+            <li id="myIssues"><a href="#">My Issues</a></li>
+            <li id="assignedIssues"><a href="#">Assigned Issues</a></li>
           </ul>
         </li>
 
-        <li class="treeview">
-          <a href="#"><i class="fa fa-link"></i> <span>Notice Board</span>
-            <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="#" class="notice">View Notice</a></li>
-            <li><a href="#" class="postNotice">Post Notice</a></li>
-          </ul>
-        </li>
-        <li class="treeview">
-          <a href="#"><i class="fa fa-link"></i> <span>Team</span>
-            <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="#" id="teamSettings">Team Members</a></li>
-            <li><a href="#" id="projectSettings">Suggest Menber</a></li>
-          </ul>
-        </li>
+        <li id="noticeBoard"><a href="#"><i class="fa fa-link"></i> <span>Notice Board</span></a></li>
+        <li id="team"><a href="#"><i class="fa fa-link"></i> <span>Team Settings</span></a></li>
 
       </ul>
       <!-- /.sidebar-menu -->
@@ -273,10 +256,97 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- AdminLTE for demo purposes -->
 <script src="../dist/js/demo.js"></script>
 
-<script src="js/page.js"></script>
+<script type="text/javascript" src="../dist/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="../dist/js/dataTables.bootstrap.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js" charset="utf-8"></script>
 
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
      Both of these plugins are recommended to enhance the
      user experience. -->
+
+<script type="text/javascript">
+ $(document).ready(function() {
+   $('.table').DataTable();
+
+   $('.content-wrapper').load("../shared/overview.html");
+
+
+
+
+   $('#overview').on('click', () => {
+     $('#activity').removeClass("active");
+     $('#overview').addClass("active");
+     $('#issues').removeClass("active");
+     $('#noticeBoard').removeClass("active");
+     $('#team').removeClass("active");
+     $('.content-wrapper').load("../shared/overview.html");
+   });
+
+   $('#activity').on('click', () => {
+     $('#activity').addClass("active");
+     $('#overview').removeClass("active");
+     $('#issues').removeClass("active");
+     $('#noticeBoard').removeClass("active");
+     $('#team').removeClass("active");
+     $('.content-wrapper').load("../shared/activity.html");
+   });
+
+   $('#createIssue').on('click', () => {
+     $('#activity').removeClass("active");
+     $('#overview').removeClass("active");
+     $('#issues').addClass("active");
+     $('#noticeBoard').removeClass("active");
+     $('#team').removeClass("active");
+     $('.content-wrapper').load("createIssue.html");
+   });
+
+   $('#assignedIssues').on('click', () => {
+     $('#activity').removeClass("active");
+     $('#overview').removeClass("active");
+     $('#issues').addClass("active");
+     $('#noticeBoard').removeClass("active");
+     $('#team').removeClass("active");
+     $('.content-wrapper').load("assignedIssues.html");
+   });
+
+   $('#myIssues').on('click', () => {
+     $('#activity').removeClass("active");
+     $('#overview').removeClass("active");
+     $('#issues').addClass("active");
+     $('#noticeBoard').removeClass("active");
+     $('#team').removeClass("active");
+     $('.content-wrapper').load("myIssues.html");
+   });
+
+   $('#noticeBoard').on('click', () => {
+     $('#activity').removeClass("active");
+     $('#overview').removeClass("active");
+     $('#issues').removeClass("active");
+     $('#noticeBoard').addClass("active");
+     $('#team').removeClass("active");
+     $('.content-wrapper').load("../shared/noticeBoard.html");
+   });
+
+   $('#team').on('click', () => {
+     $('#activity').removeClass("active");
+     $('#overview').removeClass("active");
+     $('#issues').removeClass("active");
+     $('#noticeBoard').removeClass("active");
+     $('#team').addClass("active");
+     $('.content-wrapper').load("team.html");
+   });
+
+   // $('#profile').on('click', () => {
+   //   $('#myProjects').removeClass("active");
+   //   $('#home').removeClass("active");
+   //   $('#myProfile').addClass("active");
+   //   $('#contact').removeClass("active");
+   //   $('#about').removeClass("active");
+   //   $('.content-wrapper').load("./navbar");
+   // });
+
+ });
+</script>
 </body>
 </html>

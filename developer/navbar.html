@@ -43,7 +43,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <header class="main-header">
 
     <!-- Logo -->
-    <a href="home.html" class="logo">
+    <a class="logo" id="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>M</b>P</span>
       <!-- logo for regular state and mobile devices -->
@@ -142,10 +142,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
-                  <a href="viewProfile.html" class="btn btn-default btn-flat">Profile</a>
+                  <button class="btn btn-default btn-flat" id="profile">Profile</button>
                 </div>
                 <div class="pull-right">
-                  <a href="index.html" class="btn btn-default btn-flat">Sign out</a>
+                  <a href="../index.html" class="btn btn-default btn-flat">Sign out</a>
                 </div>
               </li>
             </ul>
@@ -263,6 +263,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
     //         }
     // }
 
+    $('#logo').on('click', () => {
+      $('#myProjects').removeClass("active");
+      $('#home').addClass("active");
+      $('#myProfile').removeClass("active");
+      $('#contact').removeClass("active");
+      $('#about').removeClass("active");
+      $('.content-wrapper').load("home.html");
+    });
+
 
     $('#home').on('click', () => {
       $('#myProjects').removeClass("active");
@@ -291,6 +300,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
       $('.content-wrapper').load("myProfile.html");
     });
 
+    $('#profile').on('click', () => {
+      $('#myProjects').removeClass("active");
+      $('#home').removeClass("active");
+      $('#myProfile').addClass("active");
+      $('#contact').removeClass("active");
+      $('#about').removeClass("active");
+      $('.content-wrapper').load("myProfile.html");
+    });
+
     $('#contact').on('click', () => {
       $('#myProjects').removeClass("active");
       $('#home').removeClass("active");
@@ -307,15 +325,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
       $('#contact').removeClass("active");
       $('#about').addClass("active");
       $('.content-wrapper').load("issueDetails.html");
-    });
-
-    $('#baal').on('click', () => {
-      $('#myProjects').removeClass("active");
-      $('#home').removeClass("active");
-      $('#myProfile').removeClass("active");
-      $('#contact').removeClass("active");
-      $('#about').removeClass("active");
-      $('.content-wrapper').load("mentorProfile.html");
     });
 
   });

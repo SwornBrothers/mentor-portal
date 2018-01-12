@@ -514,18 +514,7 @@
                 <div class="timeline-item">
                   <span class="time"><i class="fa fa-clock-o"></i> 12:05</span>
 
-                  <h3 class="timeline-header"><a href="#">Support Team</a> sent you an email</h3>
-
-                  <div class="timeline-body">
-                    Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles,
-                    weebly ning heekya handango imeem plugg dopplr jibjab, movity
-                    jajah plickers sifteo edmodo ifttt zimbra. Babblely odeo kaboodle
-                    quora plaxo ideeli hulu weebly balihoo...
-                  </div>
-                  <div class="timeline-footer">
-                    <a class="btn btn-primary btn-xs">Read more</a>
-                    <a class="btn btn-danger btn-xs">Delete</a>
-                  </div>
+                  <h3 class="timeline-header"><a href="#">Dipto Zaman</a> changed status of an issue.</h3>
                 </div>
               </li>
               <!-- END timeline item -->
@@ -536,7 +525,7 @@
                 <div class="timeline-item">
                   <span class="time"><i class="fa fa-clock-o"></i> 5 mins ago</span>
 
-                  <h3 class="timeline-header no-border"><a href="#">Sarah Young</a> accepted your friend request
+                  <h3 class="timeline-header no-border"><a href="#">Sarah Young</a> commpleted an issue
                   </h3>
                 </div>
               </li>
@@ -548,7 +537,7 @@
                 <div class="timeline-item">
                   <span class="time"><i class="fa fa-clock-o"></i> 27 mins ago</span>
 
-                  <h3 class="timeline-header"><a href="#">Jay White</a> commented on your post</h3>
+                  <h3 class="timeline-header"><a href="#">Jay White</a> commented on your issue</h3>
 
                   <div class="timeline-body">
                     Take me to your leader!
@@ -575,14 +564,9 @@
                 <div class="timeline-item">
                   <span class="time"><i class="fa fa-clock-o"></i> 2 days ago</span>
 
-                  <h3 class="timeline-header"><a href="#">Mina Lee</a> uploaded new photos</h3>
+                  <h3 class="timeline-header"><a href="#">Mentor</a> created 4 new issues</h3>
 
-                  <div class="timeline-body">
-                    <img src="http://placehold.it/150x100" alt="..." class="margin">
-                    <img src="http://placehold.it/150x100" alt="..." class="margin">
-                    <img src="http://placehold.it/150x100" alt="..." class="margin">
-                    <img src="http://placehold.it/150x100" alt="..." class="margin">
-                  </div>
+
                 </div>
               </li>
               <!-- END timeline item -->
@@ -766,6 +750,7 @@
           <h4 class="modal-title">Interested People</h4>
         </div>
         <div class="modal-body">
+          <input type="hidden" id="condition" name="" value="">
           <div class="row">
 
             <div class="col-md-12">
@@ -784,8 +769,9 @@
                     <td>Dipto Zaman</td>
                     <td>Mentor</td>
                     <td align="center">
-                       <a href="#" class="btn btn-info btn-xs"><i class="fa fa-tick"></i> Make Mentor</a>
+                       <button class="btn btn-info btn-xs"><i class="fa fa-tick"></i> Make Mentor</button>
                        <button class="btn btn-info btn-xs" id="mentor" data-dismiss="modal"><i class="fa fa-angle-double-right"></i> viewProfile</button>
+
                     </td>
                   </tr>
                   <tr>
@@ -793,7 +779,7 @@
                     <td>Baky Forhad</td>
                     <td>Developer</td>
                     <td align="center">
-                       <a href="developerProfile.html" class="btn btn-info btn-xs developer"><i class="fa fa-angle-double-right"></i> viewProfile</a>
+                       <button class="btn btn-info btn-xs developer" data-dismiss="modal"><i class="fa fa-angle-double-right"></i> viewProfile</button>
                     </td>
                   </tr>
                   <tr>
@@ -801,7 +787,7 @@
                     <td>Ehsanul Haque</td>
                     <td>Developer</td>
                     <td align="center">
-                       <a href="developerProfile.html" class="btn btn-info btn-xs developer"><i class="fa fa-angle-double-right"></i> viewProfile</a>
+                       <button class="btn btn-info btn-xs developer" data-dismiss="modal"><i class="fa fa-angle-double-right"></i> viewProfile</button>
                     </td>
                   </tr>
                   <tr>
@@ -809,7 +795,7 @@
                     <td>Dipto Miah</td>
                     <td>Developer</td>
                     <td align="center">
-                       <a href="developerProfile.html" class="btn btn-info btn-xs developer"><i class="fa fa-angle-double-right"></i> viewProfile</a>
+                       <button class="btn btn-info btn-xs developer" data-dismiss="modal"><i class="fa fa-angle-double-right"></i> viewProfile</button>
                     </td>
                   </tr>
 
@@ -1118,12 +1104,23 @@
 
 </section>
 <script type="text/javascript">
-  $('#mentor').on('click', () => {
+
+  $('.developer').on('click', function() {
+    $('#condition').val('developerProfile.html');
+  });
+
+  $('#mentor').on('click', function() {
+    $('#condition').val('mentorProfile.html');
+  });
+
+  $('#modal-default').on('hidden.bs.modal', function () {
     $('#myProjects').removeClass("active");
     $('#home').removeClass("active");
     $('#myProfile').removeClass("active");
     $('#contact').removeClass("active");
     $('#about').removeClass("active");
-    $('.content-wrapper').load("mentorProfile.html");
-  });
+    if($('#condition').val()!== ''){
+      $('.content-wrapper').load($('#condition').val());
+    }
+  })
 </script>
