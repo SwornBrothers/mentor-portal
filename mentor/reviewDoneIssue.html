@@ -27,7 +27,7 @@
             <!-- /.box-tools -->
           </div>
           <!-- /.box-header -->
-          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
 
              <div class="panel-body">
                 <div class="row">
@@ -130,10 +130,11 @@
                             <strong><h5> <a href="#">Chnage Status:</a> </h5></strong>
 
                             <div class="col-sm-6 col-sm-offset-3">
-                                <ul class="list-inline">
-                                  <li> <button class="btn btn-success btn-block btn-xs">Approved</button>  </li>
-                                  <li> <button class="btn btn-danger btn-block btn-xs">Denied</button>  </li>
-                                </ul>
+
+                                  <button id="approve" class="btn btn-success btn-block btn-xs">Approve</button>
+
+                                  <button id="deny" class="btn btn-danger btn-block btn-xs">Deny</button>
+
                             </div>
 
                             <br><br><br>
@@ -154,3 +155,27 @@
 </section>
 
 <!-- /.content -->
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#approve').on('click', () => {
+      $('#activity').removeClass("active");
+      $('#overview').removeClass("active");
+      $('#issues').addClass("active");
+      $('#noticeBoard').removeClass("active");
+      $('#settings').removeClass("active");
+      alert("Issue Approved");
+      $('.content-wrapper').load("reviewIssues.html");
+    });
+
+    $('#deny').on('click', () => {
+      $('#activity').removeClass("active");
+      $('#overview').removeClass("active");
+      $('#issues').addClass("active");
+      $('#noticeBoard').removeClass("active");
+      $('#settings').removeClass("active");
+      alert("Issue Denied");
+      $('.content-wrapper').load("reviewIssues.html");
+    });
+  });
+</script>
