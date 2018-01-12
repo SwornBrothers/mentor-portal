@@ -29,11 +29,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 
+  <link rel="stylesheet" type="text/css" href="../dist/css/dataTables.bootstrap.min.css">
+
   <!-- Google Font -->
   <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-
-  <link rel="stylesheet" type="text/css" href="../dist/css/dataTables.bootstrap.min.css">
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">
@@ -43,7 +43,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <header class="main-header">
 
     <!-- Logo -->
-    <a href="./navbar.html" class="logo">
+    <a class="logo" id="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>M</b>P</span>
       <!-- logo for regular state and mobile devices -->
@@ -142,7 +142,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
-                  <button id="profile" class="btn btn-default btn-flat">Profile</button>
+                  <button class="btn btn-default btn-flat" id="profile">Profile</button>
                 </div>
                 <div class="pull-right">
                   <a href="../index.html" class="btn btn-default btn-flat">Sign out</a>
@@ -180,23 +180,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">Menu</li>
         <!-- Optionally, you can add icons to the links -->
-        <li class="active" id="overview"><a href="#"><i class="fa fa-link"></i> <span>OverView</span></a></li>
-        <li id="activity"><a href="#"><i class="fa fa-link"></i> <span>Activity</span></a></li>
-        <li class="treeview" id="issues">
-          <a href="#"><i class="fa fa-link"></i> <span>Issues</span>
-            <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-          </a>
-          <ul class="treeview-menu">
-            <li id="createIssue"><a href="#">Create Issue</a></li>
-            <li id="myIssues"><a href="#">My Issues</a></li>
-            <li id="assignedIssues"><a href="#">Assigned Issues</a></li>
-          </ul>
-        </li>
-
-        <li id="noticeBoard"><a href="#"><i class="fa fa-link"></i> <span>Notice Board</span></a></li>
-        <li id="team"><a href="#"><i class="fa fa-link"></i> <span>Team Settings</span></a></li>
+        <li class="active" id="home"><a href="#"><i class="fa fa-link"></i> <span>Home</span></a></li>
+        <li  id="myProfile"><a href="#"><i class="fa fa-link"></i> <span>My Profile</span></a></li>
+        <li id="myProjects"><a href="#"><i class="fa fa-link"></i> <span>My Projects</span></a></li>
+        <li id="about"><a href="#"><i class="fa fa-link"></i> <span>About Us</span></a></li>
+        <li id="contact"><a href="#"><i class="fa fa-link"></i> <span>Contact Us</span></a></li>
 
       </ul>
       <!-- /.sidebar-menu -->
@@ -207,21 +195,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <!-- <section class="content-header">
-      <h1>
-        Page Header
 
-      </h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
-        <li class="active">Here</li>
-      </ol>
-    </section> -->
-
-    <!-- Main content -->
-
-    <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
 
@@ -256,97 +230,104 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- AdminLTE for demo purposes -->
 <script src="../dist/js/demo.js"></script>
 
+
+
 <script type="text/javascript" src="../dist/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="../dist/js/dataTables.bootstrap.min.js"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js" charset="utf-8"></script>
 
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
      Both of these plugins are recommended to enhance the
      user experience. -->
 
 <script type="text/javascript">
- $(document).ready(function() {
-   $('.table').DataTable();
+  $(document).ready(function() {
+    $('.table').DataTable();
 
-   $('.content-wrapper').load("../shared/overview.html");
+    // var name = GetParameterValues('location');
+    //
+    // if (name == "mentorProfile") {
+    //   $('.content-wrapper').load("mentorProfile.html");
+    // } else if (name == "developerProfile") {
+    //   $('.content-wrapper').load("mentorProfile.html");
+    // }
+
+    $('.content-wrapper').load("home.html");
+
+    // function GetParameterValues(param) {
+    //         var url = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    //         for (var i = 0; i < url.length; i++) {
+    //             var urlparam = url[i].split('=');
+    //             if (urlparam[0] == param) {
+    //                 return urlparam[1];
+    //             }
+    //         }
+    // }
+
+    $('#logo').on('click', () => {
+      $('#myProjects').removeClass("active");
+      $('#home').addClass("active");
+      $('#myProfile').removeClass("active");
+      $('#contact').removeClass("active");
+      $('#about').removeClass("active");
+      $('.content-wrapper').load("home.html");
+    });
 
 
+    $('#home').on('click', () => {
+      $('#myProjects').removeClass("active");
+      $('#home').addClass("active");
+      $('#myProfile').removeClass("active");
+      $('#contact').removeClass("active");
+      $('#about').removeClass("active");
+      $('.content-wrapper').load("home.html");
+    });
 
+    $('#myProjects').on('click', () => {
+      $('#myProjects').addClass("active");
+      $('#home').removeClass("active");
+      $('#myProfile').removeClass("active");
+      $('#contact').removeClass("active");
+      $('#about').removeClass("active");
+      $('.content-wrapper').load("myProjects.html");
+    });
 
-   $('#overview').on('click', () => {
-     $('#activity').removeClass("active");
-     $('#overview').addClass("active");
-     $('#issues').removeClass("active");
-     $('#noticeBoard').removeClass("active");
-     $('#team').removeClass("active");
-     $('.content-wrapper').load("../shared/overview.html");
-   });
+    $('#myProfile').on('click', () => {
+      $('#myProjects').removeClass("active");
+      $('#home').removeClass("active");
+      $('#myProfile').addClass("active");
+      $('#contact').removeClass("active");
+      $('#about').removeClass("active");
+      $('.content-wrapper').load("myProfile.html");
+    });
 
-   $('#activity').on('click', () => {
-     $('#activity').addClass("active");
-     $('#overview').removeClass("active");
-     $('#issues').removeClass("active");
-     $('#noticeBoard').removeClass("active");
-     $('#team').removeClass("active");
-     $('.content-wrapper').load("../shared/activity.html");
-   });
+    $('#profile').on('click', () => {
+      $('#myProjects').removeClass("active");
+      $('#home').removeClass("active");
+      $('#myProfile').addClass("active");
+      $('#contact').removeClass("active");
+      $('#about').removeClass("active");
+      $('.content-wrapper').load("myProfile.html");
+    });
 
-   $('#createIssue').on('click', () => {
-     $('#activity').removeClass("active");
-     $('#overview').removeClass("active");
-     $('#issues').addClass("active");
-     $('#noticeBoard').removeClass("active");
-     $('#team').removeClass("active");
-     $('.content-wrapper').load("createIssue.html");
-   });
+    $('#contact').on('click', () => {
+      $('#myProjects').removeClass("active");
+      $('#home').removeClass("active");
+      $('#myProfile').removeClass("active");
+      $('#contact').addClass("active");
+      $('#about').removeClass("active");
+      $('.content-wrapper').load("../mentor/reviewDoneIssue.html");
+    });
 
-   $('#assignedIssues').on('click', () => {
-     $('#activity').removeClass("active");
-     $('#overview').removeClass("active");
-     $('#issues').addClass("active");
-     $('#noticeBoard').removeClass("active");
-     $('#team').removeClass("active");
-     $('.content-wrapper').load("assignedIssues.html");
-   });
+    $('#about').on('click', () => {
+      $('#myProjects').removeClass("active");
+      $('#home').removeClass("active");
+      $('#myProfile').removeClass("active");
+      $('#contact').removeClass("active");
+      $('#about').addClass("active");
+      $('.content-wrapper').load("issueDetails.html");
+    });
 
-   $('#myIssues').on('click', () => {
-     $('#activity').removeClass("active");
-     $('#overview').removeClass("active");
-     $('#issues').addClass("active");
-     $('#noticeBoard').removeClass("active");
-     $('#team').removeClass("active");
-     $('.content-wrapper').load("myIssues.html");
-   });
-
-   $('#noticeBoard').on('click', () => {
-     $('#activity').removeClass("active");
-     $('#overview').removeClass("active");
-     $('#issues').removeClass("active");
-     $('#noticeBoard').addClass("active");
-     $('#team').removeClass("active");
-     $('.content-wrapper').load("../shared/noticeBoard.html");
-   });
-
-   $('#team').on('click', () => {
-     $('#activity').removeClass("active");
-     $('#overview').removeClass("active");
-     $('#issues').removeClass("active");
-     $('#noticeBoard').removeClass("active");
-     $('#team').addClass("active");
-     $('.content-wrapper').load("team.html");
-   });
-
-   // $('#profile').on('click', () => {
-   //   $('#myProjects').removeClass("active");
-   //   $('#home').removeClass("active");
-   //   $('#myProfile').addClass("active");
-   //   $('#contact').removeClass("active");
-   //   $('#about').removeClass("active");
-   //   $('.content-wrapper').load("./navbar");
-   // });
-
- });
+  });
 </script>
 </body>
 </html>

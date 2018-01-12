@@ -1,0 +1,184 @@
+
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        My Issues
+
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
+        <li class="active">Here</li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+      <div class="row">
+        <div class="col-md-4 offset-md-4 col-sm-8 offset-sm-2 col-xs-12">
+          <br><br>
+        </div>
+      </div>
+
+      <div class="row">
+
+        <div class="col-md-12">
+          <table class="table table-striped">
+            <thead class="thead-inverse">
+              <tr>
+                <th>#</th>
+                <th>Title</th>
+                <th>Type</th>
+                <th>Priority</th>
+                <th>Created By</th>
+                <th>Date Created</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row">1</td>
+                <td>Project One</td>
+                <td>Bug</td>
+                <td>Low</td>
+                <td>Dipto Zaman</td>
+                <td>July 11, 2017</td>
+                <td align="center">
+                  <button class="btn btn-primary btn-xs edit-issue" data-toggle="modal" data-target="#modal-primary"><i class="fa fa-angle-double-right"></i> Assign</button>
+                  <button class="btn btn-info btn-xs view-issue"><i class="fa fa-angle-double-right"></i> Details</button>
+                </td>
+              </tr>
+              <tr>
+                <td scope="row">2</td>
+                <td>Project Two</td>
+                <td>Task</td>
+                <td>Medium</td>
+                <td>Dipto Zaman</td>
+                <td>July 12, 2017</td>
+                <td align="center">
+                  <button class="btn btn-primary btn-xs edit-issue" data-toggle="modal" data-target="#modal-primary"><i class="fa fa-angle-double-right"></i> Assign</button>
+                  <button class="btn btn-info btn-xs view-issue"><i class="fa fa-angle-double-right"></i> Details</button>
+                </td>
+              </tr>
+              <tr>
+                <td scope="row">3</td>
+                <td>Issue Three</td>
+                <td>Redo</td>
+                <td>High</td>
+                <td>Dipto Zaman</td>
+                <td>July 12, 2017</td>
+                <td align="center">
+                  <button class="btn btn-primary btn-xs edit-issue" data-toggle="modal" data-target="#modal-primary"><i class="fa fa-angle-double-right"></i> Assign</button>
+                  <button class="btn btn-info btn-xs view-issue"><i class="fa fa-angle-double-right"></i> Details</button>
+                </td>
+              </tr>
+              <tr>
+                <td scope="row">4</td>
+                <td>Issue Four</td>
+                <td>Bug</td>
+                <td>High</td>
+                <td>Ehsan Haque</td>
+                <td>July 13, 2017</td>
+                <td align="center">
+                  <button class="btn btn-primary btn-xs edit-issue" data-toggle="modal" data-target="#modal-primary"><i class="fa fa-angle-double-right"></i> Assign</button>
+                  <button class="btn btn-info btn-xs view-issue"><i class="fa fa-angle-double-right"></i> Details</button>
+                </td>
+              </tr>
+              <tr>
+                <td scope="row">5</td>
+                <td>Issue Five</td>
+                <td>Task</td>
+                <td>Medium</td>
+                <td>Dipto Zaman</td>
+                <td>July 14, 2017</td>
+                <td align="center">
+                  <button class="btn btn-primary btn-xs edit-issue" data-toggle="modal" data-target="#modal-primary"><i class="fa fa-angle-double-right"></i> Assign</button>
+                  <button class="btn btn-info btn-xs view-issue"><i class="fa fa-angle-double-right"></i> Details</button>
+                </td>
+              </tr>
+              <tr>
+                <td scope="row">6</td>
+                <td>Issue Six</td>
+                <td>Redo</td>
+                <td>High</td>
+                <td>Dipto Zaman</td>
+                <td>July 14, 2017</td>
+                <td align="center">
+                  <button class="btn btn-primary btn-xs edit-issue" data-toggle="modal" data-target="#modal-primary"><i class="fa fa-angle-double-right"></i> Assign</button>
+                  <button class="btn btn-info btn-xs view-issue"><i class="fa fa-angle-double-right"></i> Details</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="modal modal-primary fade" id="modal-primary">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Primary Modal</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-sm-12">
+                <form class="" action="#" method="post">
+                  <div class="row">
+                  <div class="col-md-8 col-md-offset-2">
+                    <div class="box-header with-border">
+                      <h3 class="text-center">Assign Issue</h3>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <!-- text input -->
+
+
+                        <div class="form-group">
+                          <label>Select Team Member</label>
+                          <select class="form-control">
+                            <option>--Select--</option>
+                            <option>Dipto</option>
+                            <option>Baky</option>
+                            <option>Ehsan</option>
+                          </select>
+                        </div>
+
+
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                </div>
+
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-outline">Assign</button>
+          </div>
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dialog -->
+    </div>
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.table').DataTable();
+
+    $('.view-issue').on('click', () => {
+      $('#activity').removeClass("active");
+      $('#overview').removeClass("active");
+      $('#issues').removeClass("active");
+      $('#noticeBoard').removeClass("active");
+      $('#settings').removeClass("active");
+      $('.content-wrapper').load("issueDetails.html");
+    });
+  });
+</script>
