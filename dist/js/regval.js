@@ -1,7 +1,7 @@
 $(function ()
 {
     $.validator.addMethod('validPassword',function (value, element) {
-        return value.length>=6 && /\d/.test(value) && /[a-z]/i.test(value) ;
+        return value.length>=6 && /\d/.test(value) && /[a-z]/i.test(value)
 
     },'password must be at least 6 character long and contain atleast one digit and one character')
 

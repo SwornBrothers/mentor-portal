@@ -27,15 +27,15 @@
           </div>
           <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
             <div class="panel-body">
-              <form>
+              <form id="post-form" >
     						<div class="form-group">
-    							<label>Title </label>
-    							<input class="form-control" type="text">
+    							<label>Title(less than 100 characters) </label>
+    							<input class="form-control" type="text" name="title">
     						</div>
 
     						<div class="form-group">
     							<label>Language </label>
-    							<select class ="form-control">
+    							<select class ="form-control" name="language">
     								<option value="notselected">---Select---</option>
     								<option value="c#">C#</option>
     								<option value="c++">C++</option>
@@ -49,7 +49,7 @@
 
     						<div class="form-group">
     							<label>Select project Area</label>
-    							<select class="form-control">
+    							<select class="form-control" name="area">
     								<option value="notselected">Select area</option>
     								<option value="web">Web based</option>
     								<option value="desk">Desktop</option>
@@ -59,13 +59,13 @@
     						</div>
 
     						<div class="form-group">
-    							<label> Description about project(Not more than 160 words)</label>
-    							<textarea class="form-control" rows="3"></textarea>
+    							<label> Description about project(Not more than 500 words)</label>
+    							<textarea class="form-control" rows="3" name="description"></textarea>
     						</div>
 
 
 
-    						<button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#modal-default">Post</button>
+    						<button type="submit" class="btn btn-primary" >Post</button>
 
 
 
@@ -417,6 +417,9 @@
       <!-- /.modal-dialog -->
     </div>
     <!-- /.modal -->
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.17.0/jquery.validate.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.17.0/additional-methods.min.js"></script>
+    <script src="../dist/js/postValidate.js"></script>
 
 </section>
 
