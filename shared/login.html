@@ -78,6 +78,22 @@
 </div>
 <!-- /.login-box -->
 
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p>not a valid user!</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">got it!</button>
+      </div>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
 <!-- jQuery 3 -->
 <script src="../dist/js/jquery-3.2.1.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
@@ -99,10 +115,15 @@
         document.location.href = "../developer/navbar.html";
       }
       else if (name==="mentor") {
+          document.location.href = "../mentor/navbar.html";
+
+      }
+      else if(name === "sponsor") {
+          document.location.href = "../sponsor/navbar.html";
 
       }
       else {
-
+        $('#myModal').modal('show');
       }
     });
   });
